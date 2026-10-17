@@ -1,0 +1,57 @@
+{
+  "name": "dsh-music-local",
+  "version": "1.0.0",
+  "description": "本地音乐播放器：把音乐根目录下的每个文件夹作为一个列表，支持 mp3/flac/wav/dts/dff/dsd/ape/wma 等全部常见格式；零 token 消耗",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "author": "xiao000xue",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiao000xue/dsh-music-local.git"
+  },
+  "homepage": "https://github.com/xiao000xue/dsh-music-local#readme",
+  "bugs": {
+    "url": "https://github.com/xiao000xue/dsh-music-local/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "music",
+    "player",
+    "audio",
+    "local",
+    "flac",
+    "dts",
+    "dsd"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}

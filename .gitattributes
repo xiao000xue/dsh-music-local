@@ -1,0 +1,15 @@
+# 统一用 LF，避免 Windows 上 checkout 出 CRLF 造成 diff 噪音
+* text=auto eol=lf
+
+*.js   text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.md   text eol=lf
+
+# 二进制/资源
+*.png  binary
+*.jpg  binary
+*.gif  binary
+*.ico  binary
+*.mp3  binary

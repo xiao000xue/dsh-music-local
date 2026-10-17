@@ -1,0 +1,21 @@
+# 依赖
+node_modules/
+.pnpm-store/
+
+# 开发期调试产物（不属于插件运行时）
+out*.log
+_diag.mjs
+_test_*.mjs
+.dsh-test/
+
+# 系统/编辑器
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# 日志
+*.log
+npm-debug.log*
+pnpm-debug.log*

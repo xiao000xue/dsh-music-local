@@ -1,0 +1,11 @@
+# dsh-music-local bundle patch
+#
+# 把双面插件插进 profile 的名册：
+#   · Node 半体（exports "."）跑在宿主进程里 —— 扫描音乐库、按文件夹分组、
+#     流式送音频、调用 ffmpeg 实时转码；不注册任何模型工具，也不注入系统提示，
+#     所以对每次对话的 token 开销恒为 0
+#   · 浏览器半体（package.json 里的 dsh.client 声明 → exports "./client"）
+#     由 Web ModuleLoader 加载，负责播放条与播放面板
+- insert:
+    - id: music-local
+      name: 'dsh-music-local'
